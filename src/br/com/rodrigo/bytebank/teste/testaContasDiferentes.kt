@@ -1,13 +1,14 @@
+import br.com.rodrigo.bytebank.modelo.Cliente
 import br.com.rodrigo.bytebank.modelo.ContaCorrente
 import br.com.rodrigo.bytebank.modelo.ContaPoupanca
 
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(
-        titular = "Alex",
+        titular = Cliente("Alex", "123.456.789-88", 1234),
         numero = 1000
     )
     val contaPoupanca = ContaPoupanca(
-        titular = "Fran",
+        titular = Cliente("Fran", "000.456.789-88", 1234),
         numero = 1001
     )
 
