@@ -1,22 +1,16 @@
-import br.com.rodrigo.bytebank.modelo.Autenticavel
-import br.com.rodrigo.bytebank.modelo.Conta
-import br.com.rodrigo.bytebank.modelo.SistemaInterno
+import br.com.rodrigo.bytebank.modelo.Endereco
 
 fun main() {
-    testaContasDiferentes()
-    println("Total contas: ${Conta.total}")
+    val endereco = Endereco()
 
-    val objetoAnonimo = object : Autenticavel {
-        val nome = "Rogerio"
-        val cpf = "123.456.123-55"
-        val senha = 1234
-        override fun autentica(senha: Int): Boolean {
-           if(this.senha == senha){
-               return true
-           }
-               return false
-        }
-    }
-    val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(objetoAnonimo, 1234)
+    imprime(Unit)
+    imprime(1)
+    val teste: Any = imprime(1.0)
+    imprime(endereco)
 }
+
+fun imprime(valor: Any) :Any{
+    println(valor)
+    return valor
+}
+
